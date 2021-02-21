@@ -7,10 +7,10 @@ namespace FoxAdmTool.API.Models
 {
     public class User
     {
+        public int UserId { get; set; }
         public string Name { get; set; }
-        public int Id { get; set; }
         public string Email { get; set; }
         public string Cpf { get; set; }
-        public virtual List<Order>Orders { get; set; }
+        public IList<UserProduct> UserProducts { get; set; }
     }
 }

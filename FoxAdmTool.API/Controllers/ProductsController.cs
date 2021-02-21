@@ -54,23 +54,5 @@ namespace FoxAdmTool.API.Controllers
             var response = await _productsService.DeleteProductAsync(id);
             return Ok(response);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
