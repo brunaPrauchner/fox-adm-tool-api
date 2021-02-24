@@ -52,6 +52,5 @@ namespace FoxAdmTool.API.Models
                 new UserProduct { UserId = 2, ProductId = 31 },
                 new UserProduct { UserId = 2, ProductId = 33 });
         }
-
     }
 }

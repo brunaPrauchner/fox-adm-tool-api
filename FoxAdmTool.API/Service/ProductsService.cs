@@ -1,9 +1,7 @@
 ﻿using FoxAdmTool.API.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace FoxAdmTool.API.Service
@@ -13,7 +11,6 @@ namespace FoxAdmTool.API.Service
     {
         Task<Product> GetAsync(int id);
         Task<List<Product>> GetAllAsync();
-        //Task<bool> AddProductAsync(Product product);
         Task<bool> AddProduct(Product product);
         Task<bool> DeleteProductAsync(int id);
     }
@@ -42,13 +39,9 @@ namespace FoxAdmTool.API.Service
 
         public async Task<bool> AddProduct(Product product)
         {
-            //var result = _context.Products.AddAsync(product);
-            //await _context.SaveChangesAsync();
-            //return product;
             var result = _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
             return result.IsCompleted;
-
         }
 
 

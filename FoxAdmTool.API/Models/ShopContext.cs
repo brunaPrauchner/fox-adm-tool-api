@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 
 namespace FoxAdmTool.API.Models
 {
@@ -36,7 +31,6 @@ namespace FoxAdmTool.API.Models
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Product>().ToTable("Product");
             modelBuilder.Entity<UserProduct>().ToTable("UserProduct");
-            //modelBuilder.Entity<User_Products>().HasKey(up => new { up.UserId, up.ProductId });
             modelBuilder.Seed();
         }
     }

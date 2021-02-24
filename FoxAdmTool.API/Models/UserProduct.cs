@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace FoxAdmTool.API.Models
+﻿namespace FoxAdmTool.API.Models
 {
     public class UserProduct
     {
@@ -12,6 +7,7 @@ namespace FoxAdmTool.API.Models
 
         //their foreign key property
         public int UserId { get; set; }
+
         //reference navigation property
         public User User { get; set; }
         public int ProductId { get; set; }

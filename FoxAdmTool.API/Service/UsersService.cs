@@ -1,5 +1,4 @@
 ﻿using FoxAdmTool.API.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,8 +7,6 @@ using System.Threading.Tasks;
 
 namespace FoxAdmTool.API.Service
 {
-
-
     public interface IUsersService
     {
         Task<List<User>> GetAllAsync();
@@ -54,7 +51,6 @@ namespace FoxAdmTool.API.Service
             if (user == null)
                 throw new Exception("user doesnt exist");
 
-
             var query = await (from up in _context.UserProducts
                                join p in _context.Products on up.ProductId equals p.ProductId
                                where up.UserId == id
@@ -76,7 +72,6 @@ namespace FoxAdmTool.API.Service
                 cpfuser = user.Cpf
             };
             return respObj;
-
         }
 
         public async Task<Object> GetAllUserInfoCpf(string cpf)
